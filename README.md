@@ -1,6 +1,6 @@
-# 🎓 College Assignments Repository
+# 🎓 Institute Assignments Repository
 
-Welcome to my **College Assignments Repository**, where I’ve organized solutions to various programming and development assignments. This includes topics from frontend development, object-oriented programming, data structures, and foundational languages like C,C++ and Python.
+Welcome to my **Institute Assignments Repository**, where I’ve organized solutions to various programming and development assignments. This includes topics from frontend development, object-oriented programming, data structures, and foundational languages like C,C++ and Python.
 
 ---
 
@@ -19,8 +19,8 @@ Assignments covering:
 - Generics and Collections
 - Exception Handling
 
-### ⚙️ **C Programming (Upcoming)**
-Foundation-level programming and logic-building assignments in C.
+### ⚙️ **C and C++ Programming (Upcoming)**
+Foundation-level programming and logic-building assignments in C and C++.
 
 ### 🐍 **Python (Upcoming)**
 Assignments focused on syntax, data structures, and problem-solving in Python.
