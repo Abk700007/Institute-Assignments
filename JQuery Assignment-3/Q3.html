@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#start').click(function () {
+                $('.animate').animate({
+                    width: '400px',
+                    height: '400px',
+                    borderRadius: '50%',
+                    backgroundColor: '#6a0dad'
+                }, 2000);
+            });
+
+            $('#stop').click(function () {
+                $('.animate').stop();
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f4f4f9, #dfe7fd);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .animate {
+            width: 100px;
+            height: 100px;
+            background-color: #851818;
+            margin: 20px auto;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .animate:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .button {
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="animate"></div>
+    <div class="button">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+</body>
+</html>

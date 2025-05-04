@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Html Fetch Text</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fetch-text-btn').click(function () {
+                alert($('p').text());
+            });
+            $('#fetch-html-btn').click(function () {
+                alert($('div.container2').html());
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f4f6f9, #dde2f1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container1 {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            background-color: #003f7f;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .container2 {
+            margin: 20px 0; 
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            font-size: 16px;
+            color: #555;
+        }
+
+        strong {
+            color: #6a0dad;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <p>This is the text content of a paragraph.</p>
+        <div class="container2">
+            <strong>This is a bOx In WhiCh TEXt Is WriTten SoMe LetTerS CapITal Some SmalL ✌️.</strong>
+        </div>
+        <button id="fetch-text-btn">Fetch Text</button>
+        <button id="fetch-html-btn">Fetch HTML</button>
+    </div>
+</body>
+</html>

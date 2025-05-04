@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#add-row').click(function () {
+                var name = $('#student-name').val();
+                var age = $('#student-age').val();
+                var grade = $('#student-grade').val();
+                if (name && age && grade) {
+                    var newRow = '<tr><td>' + name + '</td><td>' + age + '</td><td>' + grade + '</td></tr>';
+                    $('#student-table tbody').append(newRow);
+                    $('#student-name').val('');
+                    $('#student-age').val('');
+                    $('#student-grade').val('');
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+
+            $('#change-color').click(function () {
+                $('#student-table tbody td').toggleClass('highlight');
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #6a11cb;
+            color: white;
+            font-size: 18px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .highlight {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Data Table</h2>
+    
+    <div class="input-container">
+        <input type="text" id="student-name" placeholder="Enter Student Name" />
+        <input type="number" id="student-age" placeholder="Enter Age" />
+        <input type="text" id="student-grade" placeholder="Enter Grade" />
+    </div>
+
+    <div class="button-container" style="text-align: center;">
+        <button id="add-row">Add Row</button>
+        <button id="change-color">Highlight Rows</button>
+    </div>
+
+    <table id="student-table">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

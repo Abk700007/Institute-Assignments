@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Dropdown Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .dropdown-content a.option1 {
+            font-family: 'Courier New', monospace;
+            color: #f44336;
+            background-color: #ffebee;
+        }
+
+        .dropdown-content a.option2 {
+            font-family: 'Georgia', serif;
+            color: #2196F3;
+            background-color: #E3F2FD;
+        }
+
+        .dropdown-content a.option3 {
+            font-family: 'Verdana', sans-serif;
+            font-size: 18px;
+            color: #4CAF50;
+            background-color: #E8F5E9;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            height: 1000px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="dropdown-button">Hover to see dropdown</button>
+        <div class="dropdown-content">
+            <a href="#" class="option1">Option 1 - Courier Font, Red</a>
+            <a href="#" class="option2">Option 2 - Georgia Font, Blue</a>
+            <a href="#" class="option3">Option 3 - Verdana Font, Green</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>Scroll down to test the sticky dropdown and hover functionality.</p>
+    </div>
+
+</body>
+</html>

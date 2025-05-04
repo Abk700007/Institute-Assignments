@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table using CSS</title>
+    <style>
+        table,th,td{
+            border:2px solid black;
+            border-collapse: collapse;
+            margin: 20px;
+            margin-left: 500px;
+            width:600px;
+            padding:10px;
+        }
+        thead{
+            background-color: aqua;
+        }
+       tbody tr:nth-child(1)
+        {
+            background-color:rgb(241, 112, 112);
+        }
+        tr:nth-child( 4)
+        {
+            background-color:rgb(33, 109, 175);
+        }
+        tr:nth-child(7)
+        {
+            background-color:rgb(214, 249, 39);
+        }
+        tr:nth-child(10)
+        {
+            background-color:rgb(30, 204, 105);
+        }
+       
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Apple</td>
+            <td>Rs 200</td>
+            <td>2kg</td>
+        </tr>
+        <tr>
+            <td>Orange</td>
+            <td>Rs 150</td>
+            <td>2kg</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>Rs 100</td>
+            <td>2kg</td>
+        </tr>
+        <tr>
+            <td>Milk</td>
+            <td>Rs 120</td>
+            <td>2 packets</td>
+        </tr>
+        <tr>
+            <td>Cricket bat</td>
+            <td>Rs 1200</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Tennis ball</td>
+            <td>RS 100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Badminton</td>
+            <td>Rs 500</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>T-shirt</td>
+            <td>Rs 2000</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Lays Chips</td>
+            <td>Rs 100</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Kurkure</td>
+            <td>Rs 100</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Biscuits</td>
+            <td>Rs 100</td>
+            <td>5</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

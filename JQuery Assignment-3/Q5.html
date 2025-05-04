@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery,Append,Prepend,After,Before</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.append').click(function(){
+            $('ul').append('<li>CSS</li>');
+            });
+            $('.prepend').click(function(){
+            $('ul').prepend('<li>Introduction to Full Stack Development</li>');
+            });
+            $('.after').click(function(){
+            $('ul').after('<p>Topics updated</p>');
+            });
+            $('.before').click(function(){
+            $('ul').before('<h3>List of Topics Covered</h3>');
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            width: 50%;
+            text-align: left;
+        }
+        li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button{
+            padding:10px;
+            border-radius:10%;
+        }
+        button:hover{
+            background-color:rgb(42, 225, 225);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Getting Started with Full Stack</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <button class="append">Append</button>
+    <button class="prepend">Prepend</button>
+    <button class="after">Add After the list</button>
+    <button class="before">Add Before the list</button>
+
+</body>
+</html>

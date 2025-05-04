@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Change and Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#red').click(function () {
+                $('body').css('background-color', '#ff4c4c'); // Softer red
+            });
+
+            $('#blue').click(function () {
+                $('body').css('background-color', '#4c6ef5'); // Softer blue
+            });
+
+            $('#green').click(function () {
+                $('body').css('background-color', '#51cf66'); // Softer green
+            });
+
+            $('#toggle').click(function () {
+                $('div.box').toggle();
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f8f9fa;
+            transition: background-color 0.5s ease;
+        }
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .button-group {
+            margin: 20px 0;
+        }
+        button {
+            margin: 5px;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .box {
+            margin: 20px auto;
+            width: 50%;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            background-color: #bbb;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Background and Toggle Button</h1>
+    
+    <div class="button-group">
+        <button id="red">Red</button>
+        <button id="blue">Blue</button>
+        <button id="green">Green</button>
+        <button id="toggle">Toggle Visibility</button>
+    </div>
+
+    <div class="container">
+        <div class="box">This is Box 1</div>
+        <div class="box">This is Box 2</div>
+        <div class="box">This is Box 3</div>
+    </div>
+</body>
+</html>

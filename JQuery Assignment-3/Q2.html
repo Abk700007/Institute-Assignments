@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click and Double Click</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.a').click(function () {
+                $(this).text('Clicked!').css('color', '#fff');
+            });
+
+            $('.a').dblclick(function () {
+                $(this).css({
+                    'background-color': '#6a0dad',
+                    'color': '#fff',
+                    'transform': 'scale(1.1)'
+                });
+            });
+
+            $('.a').mouseenter(function () {
+                $(this).css({
+                    'border-color': 'rgb(160,150,240)',
+                    'box-shadow': '0 10px 20px rgba(0, 0, 0, 0.2)',
+                    'transform': 'scale(1.05)'
+                });
+            });
+
+            $('.a').mouseleave(function () {
+                $(this).css({
+                    'border-color': 'black',
+                    'box-shadow': 'none',
+                    'transform': 'scale(1)'
+                });
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .a {
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            border: 10px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .a:active {
+            transform: scale(0.95);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="a">Hover or Click Me</div>
+</body>
+</html>

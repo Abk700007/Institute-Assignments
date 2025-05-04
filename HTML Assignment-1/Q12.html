@@ -1,0 +1,29 @@
+<!-- Q12. Create a Webpage that Has the Following Attributes: tabindex, accesskey,
+draggable, and contenteditable:
+• Suppose there are 5 paragraphs where the 1st paragraph has tabindex set to 2, 
+the 2nd paragraph has tabindex set to 1, and so on. When the Tab button on the 
+keyboard is clicked, it should first go to the 2nd paragraph, then the 1st, and so 
+on.
+• Use the accesskey attribute in a hyperlink to access the desired link in a new 
+tab.
+• Use the contenteditable attribute and draggable attribute in any of the 
+paragraphs. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+</head>
+<body>
+
+    <h1>Interactive Webpage with Tabindex, Accesskey, Draggable, and Contenteditable</h1>
+    <p tabindex="2">This is the first paragraph with tabindex 2. Press Tab to navigate to the paragraphs in the given order.</p>
+    <p tabindex="1">This is the second paragraph with tabindex 1. It will be focused first when Tab is pressed.</p>
+    <p tabindex="3">This is the third paragraph with tabindex 3.</p>
+    <p tabindex="5" contenteditable="true">This is the fourth paragraph with tabindex 5 and is content editable. You can edit this text directly.</p>
+    <p tabindex="4" draggable="true">This is the fifth paragraph with tabindex 4 and is draggable. Try dragging this text!</p>
+    <p>Visit this <a href="https://www.example.com" target="_blank" accesskey="s">website</a> by pressing Alt + s (Windows).</p>
+
+</body>
+</html>

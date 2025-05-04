@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Class Toggle</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#add-highlight').click(function () {
+                $('.target-div').removeClass('dim').addClass('highlight');
+            });
+            $('#add-dim').click(function () {
+                $('.target-div').removeClass('highlight').addClass('dim');
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .target-div {
+            width: 300px;
+            height: 150px;
+            margin: 20px;
+            background-color: #f8f9fa;
+            border: 2px solid #6c757d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #495057;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .highlight {
+            background-color: #d8790b;
+            color: #856404;
+            border-color: #ffc107;
+            transform: scale(1.05);
+        }
+
+        .dim {
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            transition: background 1s, transform 0.8s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            transform: translateY(-8px);
+        }
+
+        button:active {
+            transform: translateY(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="target-div">This is a Text Box</div>
+    <div class="button-group">
+        <button id="add-highlight">Add Highlight</button>
+        <button id="add-dim">Add Dim</button>
+    </div>
+</body>
+</html>
